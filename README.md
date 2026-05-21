@@ -4,7 +4,7 @@ The Auth system is a lightweight, cloud-native SIEM and SOAR pipeline. I used S3
 
 Using AWS services Ec2, S3, and Lambda, I designed an automated security orchestration and response system that monitors, flags, and alerts on malicious activity:
 
-EC2 (Secure Application Server): Configure your EC2 instance to log authentication attempts or application traffic. Run a script on EC2 that aggregates these access logs (like SSH failure logs or application firewall flags) and periodically ships them to S3 for auditing.
+EC2 (Secure Application Server): Configure EC2 instance to log authentication attempts or application traffic. Run a script on EC2 that aggregates these access logs (like SSH failure logs or application firewall flags) and periodically ships them to S3 for auditing.
 
 S3 (The Secure Log Repository): Immutable security log storage, configuring S3 Bucket Policies, forcing Server-Side Encryption (SSE-KMS), and setting up Object Locking to prevent logs from being altered or deleted by an attacker.
 
