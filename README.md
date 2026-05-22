@@ -8,4 +8,8 @@ EC2 (Secure Application Server): Configure EC2 instance to log authentication at
 
 S3 (The Secure Log Repository): Immutable security log storage, configuring S3 Bucket Policies, forcing Server-Side Encryption (SSE-KMS), and setting up Object Locking to prevent logs from being altered or deleted by an attacker.
 
-Lambda (The Automated Threat Hunter): Every time a new log file drops into S3, Lambda immediately parses the file. It checks the IP addresses against a public threat intelligence feed or looks for suspicious patterns (like 50 failed login attempts in 10 seconds). If it detects a threat, Lambda executes a security action—such as sending an urgent alert notification via Amazon SNS or interacting with the AWS API to dynamically modify the EC2 instance's Security Group to block the malicious IP address entirely.
+Lambda (The Automated Threat Hunter): Every time a new log file drops into S3, Lambda immediately parses the file. It checks the IP addresses against a public threat intelligence feed or looks for suspicious patterns (multiple failed logins in short period). If it detects a threat, Lambda executes a security action—such as sending an urgent alert notification via Amazon SNS or interacting with the AWS API to dynamically modify the EC2 instance's Security Group to block the malicious IP address entirely.
+
+Other suspicious patterns for Auth: geographic shift, password spraying with common passwords, or sudden burst of database queries at unusual times.
+
+Application and API Level Threats and Infrastructure Anomalies are features that can be implemented later.
