@@ -15,7 +15,9 @@ export default function Sidebar() {
       <div className="connect-section">
         <h3>Connect with us</h3>
         <div className="connect-links">
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/yulin-lin-0a05201ab/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/YuLinSQ" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:2017yulin@gmail.com">2017yulin@gmail.com</a>
         </div>
       </div>
       
