@@ -16,6 +16,11 @@ const DB_PATH = path.join(__dirname, 'data', 'db.json');
 app.use(cors());
 app.use(express.json());
 
+// Root route
+app.get('/', (req: Request, res: Response) => {
+  res.send('AegisAuth API is running. Visit /api/users or /api/alerts.');
+});
+
 // Helper to read DB
 const readDB = () => {
   const data = fs.readFileSync(DB_PATH, 'utf-8');

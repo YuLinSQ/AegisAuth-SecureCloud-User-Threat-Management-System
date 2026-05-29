@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Alert } from '../types';
+import type { Alert } from '../types';
 
 export default function Dashboard() {
   const [alerts, setAlerts] = useState<Alert[]>([]);

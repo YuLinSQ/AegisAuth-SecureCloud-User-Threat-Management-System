@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { User } from '../types';
+import type { User } from '../types';
 
 export default function UserManagement() {
   const [users, setUsers] = useState<User[]>([]);
