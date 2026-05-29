@@ -51,6 +51,34 @@ app.post('/api/users', (req: Request, res: Response) => {
   res.status(201).json(newUser);
 });
 
+// Update a user
+app.put('/api/users/:id', (req: Request, res: Response) => {
+  const db = readDB();
+  const { id } = req.params;
+  const index = db.users.findIndex((u: any) => u.id === id);
+  if (index !== -1) {
+    db.users[index] = { ...db.users[index], ...req.body };
+    writeDB(db);
+    res.json(db.users[index]);
+  } else {
+    res.status(404).json({ message: 'User not found' });
+  }
+});
+
+// Delete a user
+app.delete('/api/users/:id', (req: Request, res: Response) => {
+  const db = readDB();
+  const { id } = req.params;
+  const filteredUsers = db.users.filter((u: any) => u.id !== id);
+  if (filteredUsers.length !== db.users.length) {
+    db.users = filteredUsers;
+    writeDB(db);
+    res.status(204).send();
+  } else {
+    res.status(404).json({ message: 'User not found' });
+  }
+});
+
 // Get all alerts
 app.get('/api/alerts', (req: Request, res: Response) => {
   const db = readDB();

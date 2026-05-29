@@ -18,11 +18,19 @@
     },
     {
       "id": "4901107a-0377-46ba-b9b3-bac73f5bb20e",
-      "name": "New Test User",
-      "email": "test@example.com",
+      "name": "test1",
+      "email": "test1@example.com",
       "role": "User",
       "status": "Active",
       "createdAt": "2026-05-27T03:46:25.328Z"
+    },
+    {
+      "id": "06787590-3399-4ba2-a9d4-d2fec2e222aa",
+      "name": "test2",
+      "email": "test2@gmail.com",
+      "role": "User",
+      "status": "Inactive",
+      "createdAt": "2026-05-29T04:59:45.035Z"
     }
   ],
   "alerts": [
