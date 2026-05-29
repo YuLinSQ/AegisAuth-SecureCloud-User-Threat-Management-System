@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@aegisauth.com",
+      "role": "Admin",
+      "status": "Active",
+      "createdAt": "2024-05-20T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Security Analyst",
+      "email": "analyst@aegisauth.com",
+      "role": "Analyst",
+      "status": "Active",
+      "createdAt": "2024-05-21T12:00:00Z"
+    },
+    {
+      "id": "4901107a-0377-46ba-b9b3-bac73f5bb20e",
+      "name": "New Test User",
+      "email": "test@example.com",
+      "role": "User",
+      "status": "Active",
+      "createdAt": "2026-05-27T03:46:25.328Z"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "1",
+      "severity": "High",
+      "type": "Brute Force",
+      "source": "192.168.1.100",
+      "timestamp": "2024-05-26T08:30:00Z",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "severity": "Medium",
+      "type": "Unauthorized Access",
+      "source": "10.0.0.5",
+      "timestamp": "2024-05-26T09:15:00Z",
+      "status": "Investigating"
+    }
+  ]
+}
