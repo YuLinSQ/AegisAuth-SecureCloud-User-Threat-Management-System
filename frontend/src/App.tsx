@@ -9,7 +9,12 @@ function App() {
     <Router>
       <div className="app-wrapper">
         <header className="top-header">
-          <h1>AEGISAUTH</h1>
+          <div className="logo-brand">
+            <svg className="logo-icon">
+              <use href="/icons.svg#aegis-logo" />
+            </svg>
+            <h1>AEGISAUTH</h1>
+          </div>
         </header>
         <div className="app-container">
           <Sidebar />

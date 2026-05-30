@@ -31,6 +31,17 @@ body {
   align-items: center;
 }
 
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+}
+
 .top-header h1 {
   margin: 0;
   font-size: 1.25rem;
